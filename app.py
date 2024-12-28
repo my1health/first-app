@@ -55,4 +55,4 @@ def check_login(user, passw):
     print("Check Login")
 
 if __name__ == "__main__":
-    app.run(debug= True)
+    app.run( port= 10000)
