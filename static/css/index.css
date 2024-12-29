@@ -2,7 +2,7 @@
 	border: 0px;
 	padding: 0px;
 	margin: 0px;
-	height: 200px;
+	height: 100px;
 	text-align: center;
 }
 
@@ -29,4 +29,13 @@ body{ border: 0px;
 
 .imgs{width: 100%;
 	height: 100%;
+}
+
+.gsbut{border: none;
+	background: #0076ff;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 20px;
+
+
 }

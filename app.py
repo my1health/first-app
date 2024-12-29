@@ -14,27 +14,10 @@ def hello_world():
 
     return r("index.html")
 
-@app.route("/<name>")
-def hello(name):
+@app.route("/en/symptoms/")
+def symp():
     
-    return f"Hello {escape(name)}!"
-
-    #return f"Hello {name}!"
-
-@app.route("/user/<username>")
-def sup(username):
-
-    return f"User {escape(username)}"
-
-@app.route("/post/<int:pid>")
-def sp(pid):
-
-    return f"Post {escape(pid)}"
-
-@app.route("/path/<path:spw>")
-def ssp(spw):
-
-    return f"Subpath {escape(spw)}"
+    return r("symptoms.html")
 
 @app.route("/login", methods= ["POST", "GET"])
 def ulogin():
