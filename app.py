@@ -14,26 +14,15 @@ def hello_world():
 
     return r("index.html")
 
+@app.route("/writeups/wiseguy.html")
+def wiseguy():
+    return r("wiseguy.html")
+
 @app.route("/en/symptoms/")
 def symp():
     
     return r("symptoms.html")
 
-@app.route("/login", methods= ["POST", "GET"])
-def ulogin():
-    err= None
-    if req.method == "POST":
-        #fo= req.form
-        #fo= req.form.items()
-        #fo= fo.send(None)
-        #help(fo)
-        #print(dir(fo))
-        us= escape(req.form.get("username"))
-        pa= escape(req.form.get("password"))
-        check_login()
-        #print("\n{}, {}\n".format(us, pa))
-        return "<h1>You have been logged in</h1>"
-    return "<h1>ERROR</h1>"
 def check_login(user, passw):
     print("Check Login")
 
