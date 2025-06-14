@@ -1,0 +1,22 @@
+HELLO, This is how i was able to solve the challange
+
+First according to instructions, i downloaded and went through the source code to understand what it does. 
+So let's go through the important parts of the source code together.
+
+In the function 'setup':
+
+1) for i in range(0, len(flag)) - length of flag is 20, so we are looking at the range between 0 and 20. So 'i' would loop from 0 to 19 (if you count number of loops  you get 20)
+
+2) ord(flag[i]) - When 'i' is 0, it would take the return the first letter in the word assigned to flag variable. Then ord() function would convert this letter or character to it's integer form.
+
+3) len(key) - would return the no of characters in the key variable
+
+4) i % len(key) - when you divide i by the length of key, the remainder is what would be returned.
+
+5) key[i % len(key)] - the answer from above (let's assume 0) would be use to index the key variable, ie if it is 0, it would return the first character in the key variable.
+
+6) ord(key[i % len(key)]) - The character returned from above code would be converted to it's integer form.
+
+7) ord(flag[i]) ^ ord(key[i % len(key)]) - The answer from number 2 would be xored with the answer from number 6 above.
+
+8) pass
